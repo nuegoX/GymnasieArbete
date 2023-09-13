@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -331,14 +331,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\hugo.wikstrom\One Night at NTIschool
+  m_LastProjectPath: C:\Users\hugo.wikstrom\Documents\GitHub\GymnasieArbete\One Night
+    at NTIschool
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 42590000
-    m_LastClickedID: 22850
-    m_ExpandedIDs: 000000004259000000ca9a3bffffff7f
+    m_SelectedIDs: 34590000
+    m_LastClickedID: 22836
+    m_ExpandedIDs: 000000003459000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -366,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 0000000034590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -393,7 +394,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -508,7 +509,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 18fbffff
+      m_ExpandedIDs: 30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -570,8 +571,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -164.79999, y: -26.399994}
+      snapOffset: {x: -164.79999, y: -26.399994}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -862,9 +863,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.041434, y: -0.6636522, z: -3.7500103}
+    m_Target: {x: 0.93503296, y: -5.1219645, z: 11.536708}
     speed: 2
-    m_Value: {x: -4.041434, y: -0.6636522, z: -3.7500103}
+    m_Value: {x: 0.93503296, y: -5.1219645, z: 11.536708}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -910,13 +911,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.07367035, y: 0.90571743, z: -0.17635764, w: -0.37834772}
+    m_Target: {x: -0.23807451, y: -0.042228337, z: 0.01033754, w: -0.9702942}
     speed: 2
-    m_Value: {x: -0.07423778, y: 0.9054518, z: -0.177716, w: -0.37823674}
+    m_Value: {x: -0.23952486, y: -0.042211935, z: 0.010400667, w: -0.9699164}
   m_Size:
-    m_Target: 10
+    m_Target: 9.955071
     speed: 2
-    m_Value: 10
+    m_Value: 9.955071
   m_Ortho:
     m_Target: 0
     speed: 2
