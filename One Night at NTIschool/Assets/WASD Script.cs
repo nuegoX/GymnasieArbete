@@ -5,6 +5,7 @@ using UnityEngine;
 public class WASDScript : MonoBehaviour
 {
     float speed = 5.0f;
+    float rotationSpeed = 150.0f;
 
     void Start()
     {
@@ -23,11 +24,13 @@ public class WASDScript : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.left * Time.deltaTime * speed); 
+            //transform.Translate(Vector3.left * Time.deltaTime * speed);
+            transform.Rotate(Vector3.down * rotationSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right * Time.deltaTime * speed); 
+            //transform.Translate(Vector3.right * Time.deltaTime * speed);
+            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
         }
     }
 }
