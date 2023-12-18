@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Camera Movement.cs" />
     <Compile Include="Assets\PlayerMovementTutorial.cs" />
+    <Compile Include="Assets\GroupRoom.cs" />
     <Compile Include="Assets\WASD Script.cs" />
     <Compile Include="Assets\movement.cs" />
   </ItemGroup>
