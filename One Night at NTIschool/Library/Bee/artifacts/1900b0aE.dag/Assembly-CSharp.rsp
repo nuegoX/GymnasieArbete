@@ -359,6 +359,7 @@
 "Assets/Camera Movement.cs"
 "Assets/FPmovement.cs"
 "Assets/GroupRoom.cs"
+"Assets/KronNPC.cs"
 "Assets/movement.cs"
 "Assets/PlayerMovementTutorial.cs"
 "Assets/WASD Script.cs"
