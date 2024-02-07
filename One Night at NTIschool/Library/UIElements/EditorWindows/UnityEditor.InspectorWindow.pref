@@ -15,4 +15,4 @@ MonoBehaviour:
   m_Keys:
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-waypoints__UnityEngine.UIElements.ListView
   m_Values:
-  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":326.399658203125},"firstVisibleIndex":15,"contentPadding":323.9996337890625,"contentHeight":799.19970703125,"anchoredItemIndex":15,"anchorOffset":2.4000244140625}}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":-1,"anchorOffset":0.0}}'

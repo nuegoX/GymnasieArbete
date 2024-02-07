@@ -48,8 +48,12 @@ public class KronNPC : MonoBehaviour
     Vector3 target;
 
     public string playerTag = "Player";
-    public float sightRange = 10f;
-    public float fieldOfView = 60f; // Adjust this value for the desired field of view
+    public float waypointDistance = 1f;
+    public float chaseDistance = 5f;
+    public float loseSightDistance = 10f;
+    public float resumeWaypointsDelay = 2f; // Adjust this value for the desired delay before resuming waypoints
+
+    private bool isChasing = false;
 
     private void Start()
     {
@@ -59,13 +63,22 @@ public class KronNPC : MonoBehaviour
 
     private void Update()
     {
-        if (CanSeePlayer())
+        float distanceToPlayer = Vector3.Distance(transform.position, PlayerPosition());
+
+        if (distanceToPlayer < chaseDistance)
         {
-            target = PlayerPosition();
-            agent.SetDestination(target);
+            // If player is near, chase the player
+            agent.SetDestination(PlayerPosition());
+            isChasing = true;
         }
-        else if (Vector3.Distance(transform.position, target) < 1)
+        else if (isChasing)
         {
+            // If the NPC was chasing but player is out of sight, wait for a delay, then go back to waypoints
+            StartCoroutine(ResumeWaypointsAfterDelay());
+        }
+        else if (Vector3.Distance(transform.position, target) < waypointDistance)
+        {
+            // If reached the current waypoint, go to the next waypoint
             IterateWaypointIndex();
             UpdateDestination();
         }
@@ -86,31 +99,14 @@ public class KronNPC : MonoBehaviour
         }
     }
 
-    bool CanSeePlayer()
+    IEnumerator ResumeWaypointsAfterDelay()
     {
-        GameObject player = GameObject.FindGameObjectWithTag(playerTag);
+        yield return new WaitForSeconds(resumeWaypointsDelay);
 
-        if (player != null)
-        {
-            Vector3 direction = player.transform.position - transform.position;
-            float angle = Vector3.Angle(direction, transform.forward);
-            float distance = direction.magnitude;
-
-            if (angle < fieldOfView * 0.5f && distance < sightRange)
-            {
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, direction.normalized, out hit, sightRange))
-                {
-                    if (hit.collider.CompareTag(playerTag))
-                    {
-                        Debug.DrawRay(transform.position, direction.normalized * sightRange, Color.green);
-                        return true;
-                    }
-                }
-            }
-        }
-
-        return false;
+        // Reset waypoint index to go back to following waypoints
+        waypointIndex = 0;
+        UpdateDestination();
+        isChasing = false;
     }
 
     Vector3 PlayerPosition()
