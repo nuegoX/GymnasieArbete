@@ -17683,8 +17683,10 @@ MonoBehaviour:
   waypoints: []
   playerTag: Player
   waypointDistance: 1
-  chaseDistance: 10
-  loseSightDistance: 15
+  chaseRaycastDistance: 10
+  raycastLayer:
+    serializedVersion: 2
+    m_Bits: 0
   resumeWaypointsDelay: 2
 --- !u!1 &598663393
 GameObject:
@@ -29811,7 +29813,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -31681,7 +31683,7 @@ GameObject:
   - component: {fileID: 1032872494}
   - component: {fileID: 1032872493}
   - component: {fileID: 1032872492}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FPSPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -33079,8 +33081,10 @@ MonoBehaviour:
   - {fileID: 52745455}
   playerTag: Player
   waypointDistance: 1
-  chaseDistance: 10
-  loseSightDistance: 15
+  chaseRaycastDistance: 20
+  raycastLayer:
+    serializedVersion: 2
+    m_Bits: 8
   resumeWaypointsDelay: 2
 --- !u!1 &1068327983
 GameObject:
@@ -39809,8 +39813,10 @@ MonoBehaviour:
   waypoints: []
   playerTag: Player
   waypointDistance: 1
-  chaseDistance: 10
-  loseSightDistance: 15
+  chaseRaycastDistance: 10
+  raycastLayer:
+    serializedVersion: 2
+    m_Bits: 0
   resumeWaypointsDelay: 2
 --- !u!1 &1275910585
 GameObject:
@@ -63812,7 +63818,7 @@ GameObject:
   - component: {fileID: 2040104918}
   - component: {fileID: 2040104920}
   - component: {fileID: 2040104919}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Player
   m_Icon: {fileID: 0}
