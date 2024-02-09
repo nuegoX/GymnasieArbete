@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 82
+  controlID: 119
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 443
     height: 1299
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 37
+  controlID: 52
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 38
+  controlID: 53
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Materials
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\nuego\Documents\GitHub\GymnasieArbete\One Night at
     NTIschool
@@ -337,9 +337,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4c770000
-    m_LastClickedID: 30540
-    m_ExpandedIDs: 000000004c77000000ca9a3bffffff7f
+    m_SelectedIDs: 9c770000
+    m_LastClickedID: 30620
+    m_ExpandedIDs: 000000007c77000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004c770000
+    m_ExpandedIDs: 000000007c770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -506,10 +506,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 416}
+      scrollPos: {x: 0, y: 10245}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c8efffffb6f0ffff70f1ffff30fbffffc05d0000
+      m_ExpandedIDs: 30fbffffc25d0000506f0000247400005a740000d6740000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -876,9 +876,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 47.192795, y: 27.998116, z: 6.3945827}
+    m_Target: {x: -0.80355626, y: 28.320322, z: 4.6609464}
     speed: 2
-    m_Value: {x: 47.192795, y: 27.998116, z: 6.3945827}
+    m_Value: {x: -0.80355626, y: 28.320322, z: 4.6609464}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -924,9 +924,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.029443864, y: -0.70524436, z: 0.029405164, w: -0.7077198}
+    m_Target: {x: -0.02453365, y: -0.5597194, z: 0.016600695, w: -0.82817435}
     speed: 2
-    m_Value: {x: -0.028382663, y: -0.7052987, z: 0.028347744, w: -0.7077743}
+    m_Value: {x: -0.024558082, y: -0.55846643, z: 0.016563578, w: -0.8289981}
   m_Size:
     m_Target: 2.0281222
     speed: 2
