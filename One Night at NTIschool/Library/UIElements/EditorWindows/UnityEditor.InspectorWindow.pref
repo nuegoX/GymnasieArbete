@@ -17,6 +17,6 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-waypointData.waypoints__UnityEngine.UIElements.ListView
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-commonWaypoints__UnityEngine.UIElements.ListView
   m_Values:
-  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":319.0},"firstVisibleIndex":14,"contentPadding":308.0,"contentHeight":792.0,"anchoredItemIndex":14,"anchorOffset":11.0}}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":103.0},"firstVisibleIndex":4,"contentPadding":88.0,"contentHeight":792.0,"anchoredItemIndex":4,"anchorOffset":15.0}}'
   - '{}'
   - '{}'
