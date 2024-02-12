@@ -64,6 +64,7 @@
     <Compile Include="Assets\LightFlicker.cs" />
     <Compile Include="Assets\Camera Movement.cs" />
     <Compile Include="Assets\ProximitySound.cs" />
+    <Compile Include="Assets\GameTimeHandling.cs" />
     <Compile Include="Assets\PlayerMovementTutorial.cs" />
     <Compile Include="Assets\GroupRoom.cs" />
     <Compile Include="Assets\WASD Script.cs" />

@@ -19,6 +19,10 @@ public class GameOver : MonoBehaviour
             GameOverr();
             Debug.Log("This is a NPC");
         }
+        else
+        {
+            Debug.Log("Not an NPC");
+        }
         Debug.Log("This is a log meseeesage");
 
     }
@@ -26,7 +30,7 @@ public class GameOver : MonoBehaviour
     private void GameOverr()
     {
         // Pause the game (stop time)
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         /*
         // Display the game over canvas
         if (gameOverCanvas != null)
@@ -35,7 +39,7 @@ public class GameOver : MonoBehaviour
         }*/
 
         // Invoke the RestartGame function after 5 seconds
-        Invoke("RestartGame", 5f);
+        Invoke("RestartGame", 0.1f);
     }
 
     private void RestartGame()

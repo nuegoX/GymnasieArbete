@@ -359,6 +359,7 @@
 "Assets/Camera Movement.cs"
 "Assets/FPmovement.cs"
 "Assets/GameOver.cs"
+"Assets/GameTimeHandling.cs"
 "Assets/GroupRoom.cs"
 "Assets/KronNPC.cs"
 "Assets/LightFlicker.cs"
