@@ -366,6 +366,7 @@
 "Assets/movement.cs"
 "Assets/PlayerMovementTutorial.cs"
 "Assets/ProximitySound.cs"
+"Assets/Rotate.cs"
 "Assets/ToggleModes.cs"
 "Assets/WASD Script.cs"
 -langversion:9.0
