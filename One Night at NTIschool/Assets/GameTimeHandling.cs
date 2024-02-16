@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameTimeHandling : MonoBehaviour
 {
@@ -11,8 +12,11 @@ public class GameTimeHandling : MonoBehaviour
     public AudioClip sound5;
     public AudioClip sound6;
     public AudioClip winSound;
-
     private AudioSource audioSource;
+    public GameObject gameOverCanvas;
+
+    [SerializeField]
+    private GameObject exitGate1;
 
     private void Start()
     {
@@ -20,14 +24,15 @@ public class GameTimeHandling : MonoBehaviour
 
         // Start coroutines for each action at different time intervals
         StartCoroutine(PlaySoundAfterDelay(sound1, 0f));      // Play sound immediately
+        StartCoroutine(OpenExitGate(20f));
         StartCoroutine(PlaySoundAfterDelay(sound2, 120f));    // Play sound after 2 minutes (120 seconds)
         StartCoroutine(PlaySoundAfterDelay(sound3, 240f));    // Play sound after 4 minutes (240 seconds)
-        StartCoroutine(PlaySoundAfterDelay(sound4, 240f));    // Play sound after 6 minutes (360 seconds)
-        StartCoroutine(PlaySoundAfterDelay(sound5, 240f));    // Play sound after 6 minutes (360 seconds)
-        StartCoroutine(PlaySoundAfterDelay(sound6, 240f));    // Play sound after 8 minutes (480 seconds)
-        StartCoroutine(WinGameAfterDelay(480f));             // Only two minutes left. The teachers know where you are. QUICK! Escape!
+        StartCoroutine(PlaySoundAfterDelay(sound4, 240f));    // Play sound after 6 minutes (360 seconds)        
+        StartCoroutine(PlaySoundAfterDelay(sound5, 240f));    // Play sound after 8 minutes (480 seconds)
+        
 
-        StartCoroutine(WinGameAfterDelay(600f));             // Win game after 10 minutes (600 seconds)
+        // 10 Minutes passed - You lose
+        StartCoroutine(TimeRanOut(6f));             // Lose game after 10 minutes (600 seconds)
     }
 
     private IEnumerator PlaySoundAfterDelay(AudioClip sound, float delayInSeconds)
@@ -41,23 +46,48 @@ public class GameTimeHandling : MonoBehaviour
         }
     }
 
-    private IEnumerator WinGameAfterDelay(float delayInSeconds)
+    private IEnumerator TimeRanOut(float delayInSeconds)
     {
         yield return new WaitForSeconds(delayInSeconds);
 
         // Call the function or perform the action to win the game
-        WinGame();
+        TimeIsUp();
+    }
+    
+    private IEnumerator OpenExitGate(float delayInSeconds)
+    {
+        yield return new WaitForSeconds(delayInSeconds);
+
+        EndgameAction();
     }
 
-    private void WinGame()
+    private void TimeIsUp()
     {
-        Debug.Log("You win the game!");
-        // Add your win game logic here
+        Time.timeScale = 0f;
+        if (gameOverCanvas != null)
+        {
+            gameOverCanvas.SetActive(true);
+        }
+        RestartGame();
+    }
+    private void RestartGame()
+    {
+        // Unpause the game
+        Time.timeScale = 1f;
+
+        // Reload the scene to restart the game
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private void EndgameAction()
     {
-        // Activate alarm.
-        // Red alarm-lights activate.
-        // Random escape route opens up.
+        if (exitGate1 != null)
+        {
+            Destroy(exitGate1);
+        } else
+        {
+            Debug.Log("Something went wrong");
+        }
+
+
     }
 }

@@ -9,7 +9,10 @@ public class Rotate : MonoBehaviour
     [SerializeField]
     private Light[] pointLights;
 
-    public void Update()
+    [SerializeField]
+    private AudioSource alarmSound;
+
+    private void Update()
     {
         if (AlarmsActivated)
         {
@@ -21,9 +24,28 @@ public class Rotate : MonoBehaviour
                 if (light != null)
                 {
                     // Interpolate intensity from 0 to 2 over time
-                    light.intensity = Mathf.Lerp(0f, 2f, Mathf.PingPong(Time.time, 1f));
+                    light.intensity = Mathf.Lerp(0f, 1.5f, Mathf.PingPong(Time.time, 1f));
                 }
             }
+
+            // Adjust sound volume based on distance
+            // Adjust sound volume based on distance
+            if (alarmSound != null)
+            {
+                float distanceToPlayer = Vector3.Distance(transform.position, Camera.main.transform.position);
+                float volume = Mathf.Clamp01(1f - distanceToPlayer / 35f); // Adjust the divisor for the desired volume falloff
+
+                // Set the maximum volume to 75%
+                volume *= 0.01f;
+
+                alarmSound.volume = volume;
+
+                if (!alarmSound.isPlaying)
+                {
+                    alarmSound.Play();
+                }
+            }
+
         }
     }
 
