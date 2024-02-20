@@ -10,7 +10,6 @@ public class GameTimeHandling : MonoBehaviour
     public AudioClip sound3;
     public AudioClip sound4;
     public AudioClip sound5;
-    public AudioClip sound6;
     public AudioClip winSound;
     private AudioSource audioSource;
     public GameObject gameOverCanvas;
@@ -24,15 +23,16 @@ public class GameTimeHandling : MonoBehaviour
 
         // Start coroutines for each action at different time intervals
         StartCoroutine(PlaySoundAfterDelay(sound1, 0f));      // Play sound immediately
-        StartCoroutine(OpenExitGate(20f));
+        
         StartCoroutine(PlaySoundAfterDelay(sound2, 120f));    // Play sound after 2 minutes (120 seconds)
         StartCoroutine(PlaySoundAfterDelay(sound3, 240f));    // Play sound after 4 minutes (240 seconds)
         StartCoroutine(PlaySoundAfterDelay(sound4, 240f));    // Play sound after 6 minutes (360 seconds)        
-        StartCoroutine(PlaySoundAfterDelay(sound5, 240f));    // Play sound after 8 minutes (480 seconds)
         
+        StartCoroutine(PlaySoundAfterDelay(sound5, 240f));    // Play sound after 8 minutes (480 seconds)
+        StartCoroutine(OpenExitGate(240f));
 
         // 10 Minutes passed - You lose
-        StartCoroutine(TimeRanOut(6f));             // Lose game after 10 minutes (600 seconds)
+        StartCoroutine(TimeRanOut(300f));             // Lose game after 10 minutes (600 seconds)
     }
 
     private IEnumerator PlaySoundAfterDelay(AudioClip sound, float delayInSeconds)
@@ -49,8 +49,6 @@ public class GameTimeHandling : MonoBehaviour
     private IEnumerator TimeRanOut(float delayInSeconds)
     {
         yield return new WaitForSeconds(delayInSeconds);
-
-        // Call the function or perform the action to win the game
         TimeIsUp();
     }
     
@@ -63,21 +61,10 @@ public class GameTimeHandling : MonoBehaviour
 
     private void TimeIsUp()
     {
-        Time.timeScale = 0f;
-        if (gameOverCanvas != null)
-        {
-            gameOverCanvas.SetActive(true);
-        }
-        RestartGame();
-    }
-    private void RestartGame()
-    {
-        // Unpause the game
-        Time.timeScale = 1f;
-
-        // Reload the scene to restart the game
+        //Restart game.
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
     private void EndgameAction()
     {
         if (exitGate1 != null)

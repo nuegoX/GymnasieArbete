@@ -368,6 +368,7 @@
 "Assets/ProximitySound.cs"
 "Assets/Rotate.cs"
 "Assets/ToggleModes.cs"
+"Assets/VideoPlayerToRawImage.cs"
 "Assets/WASD Script.cs"
 -langversion:9.0
 

@@ -61,6 +61,7 @@
     <Compile Include="Assets\KronNPC.cs" />
     <Compile Include="Assets\ToggleModes.cs" />
     <Compile Include="Assets\FPmovement.cs" />
+    <Compile Include="Assets\VideoPlayerToRawImage.cs" />
     <Compile Include="Assets\LightFlicker.cs" />
     <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\Camera Movement.cs" />

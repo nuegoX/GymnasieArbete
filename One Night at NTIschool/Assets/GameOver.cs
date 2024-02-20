@@ -19,26 +19,19 @@ public class GameOver : MonoBehaviour
             GameOverr();
             Debug.Log("This is a NPC");
         }
-        else
+        else if (other.CompareTag("Finish"))
         {
-            Debug.Log("Not an NPC");
+            WinGame();
         }
-        Debug.Log("This is a log meseeesage");
 
     }
 
+    private void WinGame()
+    {
+        Debug.Log("Game is won.");
+    }
     private void GameOverr()
     {
-        // Pause the game (stop time)
-        //Time.timeScale = 0f;
-        /*
-        // Display the game over canvas
-        if (gameOverCanvas != null)
-        {
-            gameOverCanvas.SetActive(true);
-        }*/
-
-        // Invoke the RestartGame function after 5 seconds
         Invoke("RestartGame", 0.1f);
     }
 
