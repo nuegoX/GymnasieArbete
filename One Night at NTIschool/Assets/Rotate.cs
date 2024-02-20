@@ -24,7 +24,7 @@ public class Rotate : MonoBehaviour
                 if (light != null)
                 {
                     // Interpolate intensity from 0 to 2 over time
-                    light.intensity = Mathf.Lerp(0f, 1.5f, Mathf.PingPong(Time.time, 1f));
+                    light.intensity = Mathf.Lerp(0f, 1f, Mathf.PingPong(Time.time, 1f));
                 }
             }
 
@@ -51,7 +51,7 @@ public class Rotate : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(ActivateAlarm(10f));
+        StartCoroutine(ActivateAlarm(480f));
     }
 
     private IEnumerator ActivateAlarm(float delayInSeconds)

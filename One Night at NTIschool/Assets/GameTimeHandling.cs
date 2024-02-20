@@ -17,6 +17,9 @@ public class GameTimeHandling : MonoBehaviour
     [SerializeField]
     private GameObject exitGate1;
 
+    [SerializeField]
+    private GameObject exitGate2;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -29,10 +32,10 @@ public class GameTimeHandling : MonoBehaviour
         StartCoroutine(PlaySoundAfterDelay(sound4, 240f));    // Play sound after 6 minutes (360 seconds)        
         
         StartCoroutine(PlaySoundAfterDelay(sound5, 240f));    // Play sound after 8 minutes (480 seconds)
-        StartCoroutine(OpenExitGate(240f));
+        StartCoroutine(OpenExitGate(480f));
 
         // 10 Minutes passed - You lose
-        StartCoroutine(TimeRanOut(300f));             // Lose game after 10 minutes (600 seconds)
+        StartCoroutine(TimeRanOut(600f));             // Lose game after 10 minutes (600 seconds)
     }
 
     private IEnumerator PlaySoundAfterDelay(AudioClip sound, float delayInSeconds)
@@ -67,14 +70,19 @@ public class GameTimeHandling : MonoBehaviour
 
     private void EndgameAction()
     {
-        if (exitGate1 != null)
+
+        // Generate a random number between 1 and 2
+        int randomNumber = Random.Range(1, 3);
+
+        // Perform actions based on the random number
+        if (randomNumber == 1)
         {
             Destroy(exitGate1);
-        } else
-        {
-            Debug.Log("Something went wrong");
         }
-
+        else if (randomNumber == 2)
+        {
+            Destroy(exitGate2);
+        }
 
     }
 }
