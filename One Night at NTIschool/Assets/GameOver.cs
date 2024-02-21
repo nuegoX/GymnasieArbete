@@ -29,6 +29,7 @@ public class GameOver : MonoBehaviour
     private void WinGame()
     {
         Debug.Log("Game is won.");
+        SceneManager.LoadScene("WinScene");
     }
     private void GameOverr()
     {
@@ -39,9 +40,7 @@ public class GameOver : MonoBehaviour
     {
         // Unpause the game
         Time.timeScale = 1f;
-
-        // Reload the scene to restart the game
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("MainMenuScene");
     }
     // Update is called once per frame
     void Update()

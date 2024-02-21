@@ -11,7 +11,7 @@ public class GameTimeHandling : MonoBehaviour
     public AudioClip sound4;
     public AudioClip sound5;
     public AudioClip winSound;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public GameObject gameOverCanvas;
 
     [SerializeField]
@@ -27,15 +27,19 @@ public class GameTimeHandling : MonoBehaviour
         // Start coroutines for each action at different time intervals
         StartCoroutine(PlaySoundAfterDelay(sound1, 0f));      // Play sound immediately
         
-        StartCoroutine(PlaySoundAfterDelay(sound2, 120f));    // Play sound after 2 minutes (120 seconds)
-        StartCoroutine(PlaySoundAfterDelay(sound3, 240f));    // Play sound after 4 minutes (240 seconds)
-        StartCoroutine(PlaySoundAfterDelay(sound4, 240f));    // Play sound after 6 minutes (360 seconds)        
+        StartCoroutine(PlaySoundAfterDelay(sound2, 120f));    // Play sound: Three minutes and the alarm will go off. You got this!
         
-        StartCoroutine(PlaySoundAfterDelay(sound5, 240f));    // Play sound after 8 minutes (480 seconds)
-        StartCoroutine(OpenExitGate(480f));
+        StartCoroutine(PlaySoundAfterDelay(sound3, 240f));    // Play sound: The alarm will go off in one minute. Hang in there.
+        
+        
+        StartCoroutine(PlaySoundAfterDelay(sound4, 300f));    // Play sound after 5 minutes (360 seconds)
+        StartCoroutine(OpenExitGate(300f));
 
-        // 10 Minutes passed - You lose
-        StartCoroutine(TimeRanOut(600f));             // Lose game after 10 minutes (600 seconds)
+        StartCoroutine(PlaySoundAfterDelay(sound5, 380f));    // Play sound: You have 10 seconds. QUICK!
+        
+        StartCoroutine(TimeRanOut(390f));             // Lose game
+
+
     }
 
     private IEnumerator PlaySoundAfterDelay(AudioClip sound, float delayInSeconds)
@@ -65,7 +69,7 @@ public class GameTimeHandling : MonoBehaviour
     private void TimeIsUp()
     {
         //Restart game.
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("MainMenuScene");
     }
 
     private void EndgameAction()

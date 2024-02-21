@@ -51,7 +51,7 @@ public class Rotate : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(ActivateAlarm(480f));
+        StartCoroutine(ActivateAlarm(300f));
     }
 
     private IEnumerator ActivateAlarm(float delayInSeconds)
